@@ -5,27 +5,30 @@ const checkResult = [1,2,3,4,5,6,7,8,9];
 function cellCheck(cellID){
  
     let checkSymbol;
-    let symbolSize;
+    let symbolSizeOne;
+    let symbolSizeTwo;
     let result;
 
     if(cells.length <= 9 && !cells.includes(cellID) && !resultCheck()){
 
         if(cells.length%2 === 0){
             checkSymbol = `<i class="fa-solid fa-circle"></i>`;
-            symbolSize = `text-[12svh]`;
+            symbolSizeOne = `md:text-[15svh]`;
+            symbolSizeTwo = `text-[21vw]`;
             checkResult[Number(cellID)-1] = 'O';
         }else{
             checkSymbol = `<i class="fa-solid fa-xmark"></i>`;
-            symbolSize = `text-[18svh]`;
+            symbolSizeOne = `md:text-[20svh]`;
+            symbolSizeTwo = `text-[29vw]`;
             checkResult[Number(cellID)-1] = 'X';
         }
     
         document.getElementById(cellID).innerHTML = checkSymbol;
-        document.getElementById(cellID).classList.add(symbolSize);
+        document.getElementById(cellID).classList.add(symbolSizeOne, symbolSizeTwo);
         cells.push(cellID);
         console.log(cells);
-        console.log(resultCheck());
-        console.result;
+        result = resultCheck();
+        console.log(result);
 
     }
     
