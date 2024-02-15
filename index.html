@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TicTacToe : )</title>
 
+    <style>
+        html{
+            overflow:hidden;
+        }
+    </style>
+
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -56,22 +62,34 @@
 
 
 
-                <div class="absolute h-full grid grid-rows-6 w-0">
-                    <div class="border-solid border-b-[3svh] border-[#F4E87C] -mb-[1.5svh]"></div>
-                    <div class="border-solid border-b-[3svh] border-transparent -mb-[1.5svh]"></div>
-                    <div class="border-solid border-b-[3svh] border-[#F4E87C] -mb-[1.5svh]"></div>
-                    <div class="border-solid border-b-[3svh] border-transparent -mb-[1.5svh]"></div>
-                    <div class="border-solid border-b-[3svh] border-[#F4E87C] -mb-[1.5svh]"></div>
-                    <div class="border-solid border-b-[3svh] border-transparent -mb-[1.5svh]"></div>
+                <div class="absolute h-full grid grid-rows-6 w-full">
+                    <div class="border-solid border-b-[20px] border-[#F4E87C] -mb-[10px] w-0" id="row-1"></div>
+                    <div class="border-solid border-b-[20px] border-transparent -mb-[10px]"></div>
+                    <div class="border-solid border-b-[20px] border-[#F4E87C] -mb-[10px] w-0" id="row-2"></div>
+                    <div class="border-solid border-b-[20px] border-transparent -mb-[10px]"></div>
+                    <div class="border-solid border-b-[20px] border-[#F4E87C] -mb-[10px] w-0" id="row-3"></div>
+                    <div class="border-solid border-b-[20px] border-transparent -mb-[10px]"></div>
                 </div>
 
-                <div class="absolute h-full grid grid-cols-6 w-full">
-                    <div class="border-solid border-r-[20px] border-[#f4e87c] -mr-[10px]"></div>
+                <div class="absolute h-full w-full grid grid-cols-6">
+                    <div class="border-solid border-r-[20px] border-[#f4e87c] -mr-[10px] h-0" id="colm-1"></div>
                     <div class="border-solid border-r-[20px] border-transparent -mr-[10px]"></div>
-                    <div class="border-solid border-r-[20px] border-[#F4E87C] -mr-[10px]"></div>
+                    <div class="border-solid border-r-[20px] border-[#F4E87C] -mr-[10px] h-0" id="colm-2"></div>
                     <div class="border-solid border-r-[20px] border-transparent -mr-[10px]"></div>
-                    <div class="border-solid border-r-[20px] border-[#F4E87C] -mr-[10px]"></div>
+                    <div class="border-solid border-r-[20px] border-[#F4E87C] -mr-[10px] h-0" id="colm-3"></div>
                     <div class="border-solid border-r-[20px] border-transparent -mr-[10px]"></div>
+                </div>
+
+                <div class="absolute h-full w-full flex items-center">
+
+                    <div class="h-[15px] bg-[#F4E87C] rotate-[45deg] scale-[1.4]"></div>
+
+                </div>
+
+                <div class="absolute h-full w-full flex items-center">
+
+                    <div class="h-[15px] bg-[#F4E87C] -rotate-[45deg] scale-[1.4]"></div>
+
                 </div>
 
             </div>
