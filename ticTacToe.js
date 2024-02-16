@@ -4,3 +4,28 @@
 // every cell will have a value and by clicking on the div, it will modify and array. by which we will evaluate the the results
 // print the result. 
 // there will be a restart button at the bottom that will reset everything
+
+
+let firstPlayer = 0;
+
+document.getElementById("player-select").innerText = "circle";
+document.getElementById("player-select").style.color= "#ed6677";
+document.getElementById("player-select").style.fontSize= "62px";
+document.getElementById("player-select").style.fontWeight= "bold";
+
+
+document.getElementById("player-select").addEventListener("click", function(){
+    firstPlayer += 1;
+    if(firstPlayer%2 === 0){
+        document.getElementById("player-select").innerText = "circle";
+        document.getElementById("player-select").style.color= "#ed6677";
+        document.getElementById("player-select").style.fontSize= "62px";
+
+    }else{
+        document.getElementById("player-select").innerText = "close";
+        document.getElementById("player-select").style.color= "#53bd9e";
+        document.getElementById("player-select").style.fontSize= "72px";
+
+    }
+    console.log(firstPlayer);
+})
