@@ -11,7 +11,6 @@ let firstPlayer = 0;
 document.getElementById("player-select").innerText = "circle";
 document.getElementById("player-select").style.color= "#ed6677";
 document.getElementById("player-select").style.fontSize= "62px";
-document.getElementById("player-select").style.fontWeight= "bold";
 
 
 document.getElementById("player-select").addEventListener("click", function(){
