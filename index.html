@@ -7,8 +7,8 @@
     <title>TicTacToe : )</title>
 
     <style>
-        html{
-            overflow:hidden;
+        html {
+            overflow: hidden;
         }
     </style>
 
@@ -22,13 +22,13 @@
 
     <div class="h-[100dvh] m-auto flex flex-col items-center">
 
-        <div class="flex items-center justify-center h-[15dvh] w-[95vw] lg:w-1/2">
+        <div class="flex items-center justify-center h-[15dvh] w-[90vw] md:w-1/2">
 
             <div class="flex items-center relative">
                 <div class="mr-2 w-[75px] h-[75px] flex justify-center items-center">
                     <span class="material-symbols-outlined cursor-pointer font-bold" id="player-select"></span>
                 </div>
-                    
+
                 </span>
                 <span class="text-[#2f6b45] text-xl font-medium">to play</span>
             </div>
@@ -37,34 +37,37 @@
 
         <div class="flex-1 flex items-center justify-center">
 
-            <div class="h-[95vw] lg:h-[65dvh] w-[95vw] lg:w-[65dvh] grid grid-cols-3 grid-rows-3 relative">
+            <div class="h-[90vw] md:h-[65dvh] w-[90vw] md:w-[65dvh] grid grid-cols-3 grid-rows-3 relative">
 
                 <div
-                    class="border-solid border-4 border-[#6a7883] border-t-0 border-l-0 flex items-center justify-center">
+                    class="cells border-solid border-4 border-[#6a7883] z-50 cursor-pointer border-t-0 border-l-0 flex items-center justify-center">
 
-                    <span class="material-symbols-outlined text-[40vw] lg:text-[25dvh] text-[#53bd9e]">
+                    <span class="material-symbols-outlined text-[40vw] md:text-[25dvh] text-[#53bd9e]">
                         close
                     </span>
                 </div>
-                <div class="border-solid border-4 border-[#6a7883] border-t-0 flex items-center justify-center">
+                <div class="cells border-solid border-4 border-[#6a7883] z-50 cursor-pointer border-t-0 flex items-center justify-center">
 
-                    <span class="material-symbols-outlined text-[28vw] lg:text-[18dvh] font-bold text-[#ed6677]">
+                    <span class="material-symbols-outlined text-[28vw] md:text-[18dvh] font-bold text-[#ed6677]">
                         circle
                     </span>
                 </div>
                 <div
-                    class="border-solid border-4 border-[#6a7883] border-t-0 border-r-0 flex items-center justify-center">
+                    class="cells border-solid border-4 border-[#6a7883] z-50 cursor-pointer border-t-0 border-r-0 flex items-center justify-center">
 
                 </div>
-                <div class="border-solid border-4 border-[#6a7883] border-l-0 flex items-center justify-center"></div>
-                <div class="border-solid border-4 border-[#6a7883] flex items-center justify-center"></div>
-                <div class="border-solid border-4 border-[#6a7883] border-r-0 flex items-center justify-center"></div>
-                <div
-                    class="border-solid border-4 border-[#6a7883] border-l-0 border-b-0 flex items-center justify-center">
+                <div class="cells border-solid border-4 border-[#6a7883] z-50 cursor-pointer border-l-0 flex items-center justify-center">
                 </div>
-                <div class="border-solid border-4 border-[#6a7883] border-b-0 flex items-center justify-center"></div>
+                <div class="cells border-solid border-4 border-[#6a7883] z-50 cursor-pointer flex items-center justify-center"></div>
+                <div class="cells border-solid border-4 border-[#6a7883] z-50 cursor-pointer border-r-0 flex items-center justify-center">
+                </div>
                 <div
-                    class="border-solid border-4 border-[#6a7883] border-r-0 border-b-0 flex items-center justify-center">
+                    class="cells border-solid border-4 border-[#6a7883] z-50 cursor-pointer border-l-0 border-b-0 flex items-center justify-center">
+                </div>
+                <div class="cells border-solid border-4 border-[#6a7883] z-50 cursor-pointer border-b-0 flex items-center justify-center">
+                </div>
+                <div
+                    class="cells border-solid border-4 border-[#6a7883] z-50 cursor-pointer border-r-0 border-b-0 flex items-center justify-center">
                 </div>
 
 
@@ -105,7 +108,7 @@
 
         </div>
 
-        <div class="h-[18dvh] w-[95vw] lg:w-1/2 flex items-center justify-center">
+        <div class="h-[18dvh] w-[95vw] md:w-1/2 flex items-center justify-center">
             <div class="flex items-center">
                 <span class="material-symbols-outlined text-5xl text-[#ed6677] mr-2 font-bold">
                     circle
@@ -120,9 +123,9 @@
     </div>
 
 
-    <script src="ticTacToe.js"></script>
-    <script src="functions.js"></script>
-
 </body>
+
+<script src="functions.js"></script>
+<script src="ticTacToe.js"></script>
 
 </html>

@@ -7,24 +7,51 @@
 
 
 let firstPlayer = 0;
+let firstPlayerLock;
+const cells = Array.from(document.getElementsByClassName('cells'));
+const clickedCells = [];
 
 document.getElementById("player-select").innerText = "circle";
-document.getElementById("player-select").style.color= "#ed6677";
-document.getElementById("player-select").style.fontSize= "62px";
+document.getElementById("player-select").style.color = "#ed6677";
+document.getElementById("player-select").style.fontSize = "62px";
 
 
-document.getElementById("player-select").addEventListener("click", function(){
-    firstPlayer += 1;
-    if(firstPlayer%2 === 0){
-        document.getElementById("player-select").innerText = "circle";
-        document.getElementById("player-select").style.color= "#ed6677";
-        document.getElementById("player-select").style.fontSize= "62px";
+let i = 1;
 
-    }else{
-        document.getElementById("player-select").innerText = "close";
-        document.getElementById("player-select").style.color= "#53bd9e";
-        document.getElementById("player-select").style.fontSize= "72px";
+for (const cell of cells) {
+    cell.addEventListener('click', function cellChange() {
+        if (i === 10) {
+            cell.removeEventListener("click", cellChange)
+        } else {
+            if (!clickedCells.includes(cells.indexOf(cell))) {
+                firstPlayerLock = i;
+                // console.log(firstPlayerLock);
+                console.log(cells.indexOf(cell));
+                clickedCells.push(cells.indexOf(cell));
+                i++;
+            }
+        }
+    });
+}
 
+
+
+document.getElementById("player-select").addEventListener("click", function chooseSymbol() {
+    if (firstPlayerLock) {
+        document.getElementById("player-select").removeEventListener("click", chooseSymbol)
+    } else {
+        firstPlayer += 1;
+        if (firstPlayer % 2 === 0) {
+            document.getElementById("player-select").innerText = "circle";
+            document.getElementById("player-select").style.color = "#ed6677";
+            document.getElementById("player-select").style.fontSize = "62px";
+
+        } else {
+            document.getElementById("player-select").innerText = "close";
+            document.getElementById("player-select").style.color = "#53bd9e";
+            document.getElementById("player-select").style.fontSize = "72px";
+
+        }
+        console.log(firstPlayer);
     }
-    console.log(firstPlayer);
 })
