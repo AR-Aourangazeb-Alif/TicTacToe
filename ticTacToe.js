@@ -69,7 +69,8 @@ for (const cell of cells) {
                     cell.firstElementChild.classList.add(secondPlayerTextSize, secondPlayerTextSizeMd, secondPlayerColor);
                 }
                 console.log(cells.indexOf(cell) + 1);
-                clickedCells[cells.indexOf(cell)] = cell.getElementsByTagName('span').innerText;
+                clickedCells[cells.indexOf(cell)] = cell.firstElementChild.innerText;
+                console.log(clickedCells);
                 i++;
             }
         }
