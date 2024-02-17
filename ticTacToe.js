@@ -47,7 +47,7 @@ if (firstPlayerCode % 2 === 0) {
     secondPlayer = "circle";
     secondPlayerTextSize = 'text-[28vw]';
     secondPlayerTextSizeMd = 'md:text-[18dvh]';
-    firstPlayerColor = "text-{[#ed6677]}";
+    firstPlayerColor = "text-[#ed6677]";
 
 }
 
@@ -86,12 +86,12 @@ document.getElementById("player-select").addEventListener("click", function choo
         firstPlayerCode += 1;
         if (firstPlayerCode % 2 === 0) {
             document.getElementById("player-select").innerText = "circle";
-            document.getElementById("player-select").style.color = "text-{[#ed6677]}";
+            document.getElementById("player-select").style.color = "text-[#ed6677]";
             document.getElementById("player-select").style.fontSize = "62px";
             firstPlayer = "circle";
             firstPlayerTextSize = 'text-[28vw]';
             firstPlayerTextSizeMd = 'md:text-[18dvh]';
-            firstPlayerColor = "text-{[#ed6677]}";
+            firstPlayerColor = "text-[#ed6677]";
 
             secondPlayer = "close"
             secondPlayerTextSize = 'text-[40vw]';
@@ -110,7 +110,7 @@ document.getElementById("player-select").addEventListener("click", function choo
             secondPlayer = "circle";
             secondPlayerTextSize = 'text-[28vw]';
             secondPlayerTextSizeMd = 'md:text-[18dvh]';
-            firstPlayerColor = "text-{[#ed6677]}";
+            firstPlayerColor = "text-[#ed6677]";
 
         }
         console.log(firstPlayerCode);
