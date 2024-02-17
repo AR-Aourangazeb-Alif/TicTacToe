@@ -17,39 +17,99 @@ let firstPlayerTextSize;
 let firstPlayerTextSizeMd;
 let secondPlayerTextSize;
 let secondPlayerTextSizeMd;
-let firstPlayerColor;
-let secondPlayerColor;
+
 
 
 if (firstPlayerCode % 2 === 0) {
     document.getElementById("player-select").innerText = "circle";
     document.getElementById("player-select").style.color = "#ed6677";
     document.getElementById("player-select").style.fontSize = "62px";
-    firstPlayer = "circle";
+    firstPlayer = `
+            <span class="material-symbols-outlined font-size-transition text-[#ed6677]">
+                circle
+            </span>`;
     firstPlayerTextSize = 'text-[28vw]';
     firstPlayerTextSizeMd = 'md:text-[18dvh]';
-    firstPlayerColor = "text-[#ed6677]";
 
-    secondPlayer = "close"
+    secondPlayer = `
+            <span class="material-symbols-outlined font-size-transition text-[#53bd9e]">
+                close
+            </span>`;
     secondPlayerTextSize = 'text-[40vw]';
     secondPlayerTextSizeMd = 'md:text-[25dvh]';
-    secondPlayerColor = "text-[#53bd9e]";
+
+
+
 
 } else {
     document.getElementById("player-select").innerText = "close";
     document.getElementById("player-select").style.color = "#53bd9e";
     document.getElementById("player-select").style.fontSize = "72px";
-    firstPlayer = "close";
+    firstPlayerPlayer = `
+            <span class="material-symbols-outlined font-size-transition text-[#53bd9e]">
+                close
+            </span>`;
     firstPlayerTextSize = 'text-[40vw]';
     firstPlayerTextSizeMd = 'md:text-[25dvh]';
-    firstPlayerColor = "text-[#53bd9e]";
 
-    secondPlayer = "circle";
+    secondPlayer = `
+            <span class="material-symbols-outlined font-size-transition text-[#ed6677]">
+                circle
+            </span>`;
     secondPlayerTextSize = 'text-[28vw]';
     secondPlayerTextSizeMd = 'md:text-[18dvh]';
-    firstPlayerColor = "text-[#ed6677]";
 
 }
+
+
+
+document.getElementById("player-select").addEventListener("click", function chooseSymbol() {
+    if (firstPlayerLock) {
+        document.getElementById("player-select").removeEventListener("click", chooseSymbol)
+    } else {
+        firstPlayerCode++;
+        console.log(firstPlayerCode)
+        if (firstPlayerCode % 2 === 0) {
+            document.getElementById("player-select").innerText = "circle";
+            document.getElementById("player-select").style.color = "#ed6677";
+            document.getElementById("player-select").style.fontSize = "62px";
+            firstPlayer = `
+            <span class="material-symbols-outlined font-size-transition text-[#ed6677]">
+                circle
+            </span>`;
+            firstPlayerTextSize = 'text-[28vw]';
+            firstPlayerTextSizeMd = 'md:text-[19dvh]';
+
+            secondPlayer = `
+            <span class="material-symbols-outlined font-size-transition text-[#53bd9e]">
+                close
+            </span>`;
+            secondPlayerTextSize = 'text-[40vw]';
+            secondPlayerTextSizeMd = 'md:text-[25dvh]';
+
+        } else {
+            document.getElementById("player-select").innerText = "close";
+            document.getElementById("player-select").style.color = "#53bd9e";
+            document.getElementById("player-select").style.fontSize = "72px";
+            firstPlayer = `
+            <span class="material-symbols-outlined font-size-transition text-[#53bd9e]">
+                close
+            </span>`;
+            firstPlayerTextSize = 'text-[40vw]';
+            firstPlayerTextSizeMd = 'md:text-[25dvh]';
+
+            secondPlayer = `
+            <span class="material-symbols-outlined font-size-transition text-[#ed6677]">
+                circle
+            </span>`;
+            secondPlayerTextSize = 'text-[28vw]';
+            secondPlayerTextSizeMd = 'md:text-[19dvh]';
+
+        }
+    }
+})
+
+
 
 // to reset
 let i = 1;
@@ -62,57 +122,20 @@ for (const cell of cells) {
             if (clickedCells.includes(cells.indexOf(cell) + 1)) {
                 firstPlayerLock = i;
                 if (i % 2 !== 0) {
-                    cell.firstElementChild.innerHTML = firstPlayer;
-                    cell.firstElementChild.classList.add(firstPlayerTextSize, firstPlayerTextSizeMd, firstPlayerColor);
+                    cell.innerHTML = firstPlayer;
+                    cell.firstElementChild.classList.add(firstPlayerTextSize, firstPlayerTextSizeMd);
                 } else {
-                    cell.firstElementChild.innerHTML = secondPlayer;
-                    cell.firstElementChild.classList.add(secondPlayerTextSize, secondPlayerTextSizeMd, secondPlayerColor);
+                    cell.innerHTML = secondPlayer;
+                    cell.firstElementChild.classList.add(secondPlayerTextSize, secondPlayerTextSizeMd);
                 }
-                console.log(cells.indexOf(cell) + 1);
+
+                // console.log(cells.indexOf(cell) + 1);
                 clickedCells[cells.indexOf(cell)] = cell.firstElementChild.innerText;
-                console.log(clickedCells);
+                // console.log(clickedCells);
+                // console.log(firstPlayerColor);
+                console.log(firstPlayerCode);
                 i++;
             }
         }
     });
 }
-
-
-
-document.getElementById("player-select").addEventListener("click", function chooseSymbol() {
-    if (firstPlayerLock) {
-        document.getElementById("player-select").removeEventListener("click", chooseSymbol)
-    } else {
-        firstPlayerCode += 1;
-        if (firstPlayerCode % 2 === 0) {
-            document.getElementById("player-select").innerText = "circle";
-            document.getElementById("player-select").style.color = "text-[#ed6677]";
-            document.getElementById("player-select").style.fontSize = "62px";
-            firstPlayer = "circle";
-            firstPlayerTextSize = 'text-[28vw]';
-            firstPlayerTextSizeMd = 'md:text-[18dvh]';
-            firstPlayerColor = "text-[#ed6677]";
-
-            secondPlayer = "close"
-            secondPlayerTextSize = 'text-[40vw]';
-            secondPlayerTextSizeMd = 'md:text-[25dvh]';
-            secondPlayerColor = "text-[#53bd9e]";
-
-        } else {
-            document.getElementById("player-select").innerText = "close";
-            document.getElementById("player-select").style.color = "text-[#53bd9e]";
-            document.getElementById("player-select").style.fontSize = "72px";
-            firstPlayer = "close";
-            firstPlayerTextSize = 'text-[40vw]';
-            firstPlayerTextSizeMd = 'md:text-[25dvh]';
-            firstPlayerColor = "text-[#53bd9e]";
-
-            secondPlayer = "circle";
-            secondPlayerTextSize = 'text-[28vw]';
-            secondPlayerTextSizeMd = 'md:text-[18dvh]';
-            firstPlayerColor = "text-[#ed6677]";
-
-        }
-        console.log(firstPlayerCode);
-    }
-})
