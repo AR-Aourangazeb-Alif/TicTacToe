@@ -17,6 +17,8 @@ let firstPlayerTextSize;
 let firstPlayerTextSizeMd;
 let secondPlayerTextSize;
 let secondPlayerTextSizeMd;
+let playerOne;
+let playerTwo;
 
 
 
@@ -30,6 +32,7 @@ if (firstPlayerCode % 2 === 0) {
             </span>`;
     firstPlayerTextSize = 'text-[28vw]';
     firstPlayerTextSizeMd = 'md:text-[18dvh]';
+    playerOne = "circle";
 
     secondPlayer = `
             <span class="material-symbols-outlined font-size-transition text-[#53bd9e]">
@@ -37,6 +40,8 @@ if (firstPlayerCode % 2 === 0) {
             </span>`;
     secondPlayerTextSize = 'text-[40vw]';
     secondPlayerTextSizeMd = 'md:text-[25dvh]';
+    playerTwo = "close";
+
 
 
 
@@ -51,6 +56,7 @@ if (firstPlayerCode % 2 === 0) {
             </span>`;
     firstPlayerTextSize = 'text-[40vw]';
     firstPlayerTextSizeMd = 'md:text-[25dvh]';
+    playerOne = "close";
 
     secondPlayer = `
             <span class="material-symbols-outlined font-size-transition text-[#ed6677]">
@@ -58,6 +64,7 @@ if (firstPlayerCode % 2 === 0) {
             </span>`;
     secondPlayerTextSize = 'text-[28vw]';
     secondPlayerTextSizeMd = 'md:text-[18dvh]';
+    playerTwo = "circle";
 
 }
 
@@ -79,6 +86,7 @@ document.getElementById("player-select").addEventListener("click", function choo
             </span>`;
             firstPlayerTextSize = 'text-[28vw]';
             firstPlayerTextSizeMd = 'md:text-[19dvh]';
+            playerOne = "circle";
 
             secondPlayer = `
             <span class="material-symbols-outlined font-size-transition text-[#53bd9e]">
@@ -86,6 +94,7 @@ document.getElementById("player-select").addEventListener("click", function choo
             </span>`;
             secondPlayerTextSize = 'text-[40vw]';
             secondPlayerTextSizeMd = 'md:text-[25dvh]';
+            playerTwo = "close";
 
         } else {
             document.getElementById("player-select").innerText = "close";
@@ -97,6 +106,7 @@ document.getElementById("player-select").addEventListener("click", function choo
             </span>`;
             firstPlayerTextSize = 'text-[40vw]';
             firstPlayerTextSizeMd = 'md:text-[25dvh]';
+            playerOne = "close";
 
             secondPlayer = `
             <span class="material-symbols-outlined font-size-transition text-[#ed6677]">
@@ -104,6 +114,7 @@ document.getElementById("player-select").addEventListener("click", function choo
             </span>`;
             secondPlayerTextSize = 'text-[28vw]';
             secondPlayerTextSizeMd = 'md:text-[19dvh]';
+            playerTwo = "circle";
 
         }
     }
@@ -124,9 +135,25 @@ for (const cell of cells) {
                 if (i % 2 !== 0) {
                     cell.innerHTML = firstPlayer;
                     cell.firstElementChild.classList.add(firstPlayerTextSize, firstPlayerTextSizeMd);
+                    document.getElementById("player-select").innerText = playerOne;
+
+                    if(playerOne === "circle"){
+                        document.getElementById("player-select").style.color = "#ed6677";
+                    }else{
+                        document.getElementById("player-select").style.color = "#53bd9e";
+                    }
+
                 } else {
                     cell.innerHTML = secondPlayer;
                     cell.firstElementChild.classList.add(secondPlayerTextSize, secondPlayerTextSizeMd);
+                    document.getElementById("player-select").innerText = playerTwo;
+
+                    if(playerTwo === "circle"){
+                        document.getElementById("player-select").style.color = "#ed6677";
+                    }else{
+                        document.getElementById("player-select").style.color = "#53bd9e";
+                    }
+
                 }
 
                 // console.log(cells.indexOf(cell) + 1);
