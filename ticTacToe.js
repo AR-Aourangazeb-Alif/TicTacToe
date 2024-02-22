@@ -27,7 +27,7 @@ if (firstPlayerCode % 2 === 0) {
     document.getElementById("player-select").style.color = "#ed6677";
     document.getElementById("player-select").style.fontSize = "62px";
     firstPlayer = `
-            <span class="material-symbols-outlined font-size-transition text-[#ed6677]">
+            <span class="material-symbols-outlined text-[#ed6677]">
                 circle
             </span>`;
     firstPlayerTextSize = 'text-[28vw]';
@@ -35,7 +35,7 @@ if (firstPlayerCode % 2 === 0) {
     playerOne = "circle";
 
     secondPlayer = `
-            <span class="material-symbols-outlined font-size-transition text-[#53bd9e]">
+            <span class="material-symbols-outlined text-[#53bd9e]">
                 close
             </span>`;
     secondPlayerTextSize = 'text-[40vw]';
@@ -51,7 +51,7 @@ if (firstPlayerCode % 2 === 0) {
     document.getElementById("player-select").style.color = "#53bd9e";
     document.getElementById("player-select").style.fontSize = "72px";
     firstPlayerPlayer = `
-            <span class="material-symbols-outlined font-size-transition text-[#53bd9e]">
+            <span class="material-symbols-outlined text-[#53bd9e]">
                 close
             </span>`;
     firstPlayerTextSize = 'text-[40vw]';
@@ -59,7 +59,7 @@ if (firstPlayerCode % 2 === 0) {
     playerOne = "close";
 
     secondPlayer = `
-            <span class="material-symbols-outlined font-size-transition text-[#ed6677]">
+            <span class="material-symbols-outlined text-[#ed6677]">
                 circle
             </span>`;
     secondPlayerTextSize = 'text-[28vw]';
@@ -81,7 +81,7 @@ document.getElementById("player-select").addEventListener("click", function choo
             document.getElementById("player-select").style.color = "#ed6677";
             document.getElementById("player-select").style.fontSize = "62px";
             firstPlayer = `
-            <span class="material-symbols-outlined font-size-transition text-[#ed6677]">
+            <span class="material-symbols-outlined text-[#ed6677]">
                 circle
             </span>`;
             firstPlayerTextSize = 'text-[28vw]';
@@ -89,7 +89,7 @@ document.getElementById("player-select").addEventListener("click", function choo
             playerOne = "circle";
 
             secondPlayer = `
-            <span class="material-symbols-outlined font-size-transition text-[#53bd9e]">
+            <span class="material-symbols-outlined text-[#53bd9e]">
                 close
             </span>`;
             secondPlayerTextSize = 'text-[40vw]';
@@ -101,7 +101,7 @@ document.getElementById("player-select").addEventListener("click", function choo
             document.getElementById("player-select").style.color = "#53bd9e";
             document.getElementById("player-select").style.fontSize = "72px";
             firstPlayer = `
-            <span class="material-symbols-outlined font-size-transition text-[#53bd9e]">
+            <span class="material-symbols-outlined text-[#53bd9e]">
                 close
             </span>`;
             firstPlayerTextSize = 'text-[40vw]';
@@ -109,7 +109,7 @@ document.getElementById("player-select").addEventListener("click", function choo
             playerOne = "close";
 
             secondPlayer = `
-            <span class="material-symbols-outlined font-size-transition text-[#ed6677]">
+            <span class="material-symbols-outlined text-[#ed6677]">
                 circle
             </span>`;
             secondPlayerTextSize = 'text-[28vw]';
@@ -146,6 +146,7 @@ for (const cell of cells) {
                 } else {
                     cell.innerHTML = secondPlayer;
                     cell.firstElementChild.classList.add(secondPlayerTextSize, secondPlayerTextSizeMd);
+
                     document.getElementById("player-select").innerText = playerTwo;
 
                     if(playerTwo === "circle"){
