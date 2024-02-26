@@ -50,39 +50,39 @@ for (let i of cells) {
 
             if (playCount % 2 === 0) {
                 i.firstElementChild.innerText = firstPlayer;
-                document.getElementById("player-select").innerText = firstPlayer;
-
-                if (i.firstElementChild.innerText === 'circle') {
-                    i.firstElementChild.style.fontSize = "100px";
-                    i.firstElementChild.style.color = "#ed6677";
-
-                    document.getElementById("player-select").style.fontSize = "5vw";
-                    document.getElementById("player-select").style.color = "#ed6677";
-
-                } else {
-                    i.firstElementChild.style.fontSize = "120px";
-                    i.firstElementChild.style.color = "#53bd9e";
-
-                    document.getElementById("player-select").style.fontSize = "6vw";
-                    document.getElementById("player-select").style.color = "#53bd9e";
-                }
-
-            } else {
-                i.firstElementChild.innerText = secondPlayer;
                 document.getElementById("player-select").innerText = secondPlayer;
 
                 if (i.firstElementChild.innerText === 'circle') {
                     i.firstElementChild.style.fontSize = "100px";
                     i.firstElementChild.style.color = "#ed6677";
 
-                    document.getElementById("player-select").style.fontSize = "5vw";
-                    document.getElementById("player-select").style.color = "#ed6677";
+                    document.getElementById("player-select").style.fontSize = "6vw";
+                    document.getElementById("player-select").style.color = "#53bd9e";
+
                 } else {
                     i.firstElementChild.style.fontSize = "120px";
                     i.firstElementChild.style.color = "#53bd9e";
 
+                    document.getElementById("player-select").style.fontSize = "5vw";
+                    document.getElementById("player-select").style.color = "#ed6677";
+                }
+
+            } else {
+                i.firstElementChild.innerText = secondPlayer;
+                document.getElementById("player-select").innerText = firstPlayer;
+
+                if (i.firstElementChild.innerText === 'circle') {
+                    i.firstElementChild.style.fontSize = "100px";
+                    i.firstElementChild.style.color = "#ed6677";
+
                     document.getElementById("player-select").style.fontSize = "6vw";
                     document.getElementById("player-select").style.color = "#53bd9e";
+                } else {
+                    i.firstElementChild.style.fontSize = "120px";
+                    i.firstElementChild.style.color = "#53bd9e";
+
+                    document.getElementById("player-select").style.fontSize = "5vw";
+                    document.getElementById("player-select").style.color = "#ed6677";
                 }
             }
 
