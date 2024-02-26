@@ -19,9 +19,9 @@ function line(){
         document.getElementById("colm-3").style.height = "100%";
     }else if((cellOne === cellFive && cellFive === cellNine) && (cellOne && cellFive && cellNine)){
 
-        document.getElementById("diagonal-1").style.width = "100%";
+        document.getElementById("diagonal-1").style.width = "94%";
     }else if((cellThree === cellFive && cellFive === cellSeven) && (cellThree && cellFive && cellThree)){
 
-        document.getElementById("diagonal-2").style.width = "100%";
+        document.getElementById("diagonal-2").style.width = "94%";
     }
 }
