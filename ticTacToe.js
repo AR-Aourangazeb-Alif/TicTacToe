@@ -22,3 +22,6 @@ function playerSelect(){
     }
 
 }
+
+
+console.log(document.getElementsByClassName('cells'));
