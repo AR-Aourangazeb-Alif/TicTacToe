@@ -115,6 +115,8 @@ for (let i of cells) {
                     document.getElementById("reload-up").style.display = "inline";
                 }
 
+                line();
+
             } else {
                 i.firstElementChild.innerText = secondPlayer;
                 document.getElementById("player-select").innerText = firstPlayer;
@@ -169,6 +171,8 @@ for (let i of cells) {
                     document.getElementById("reload-down").style.display = "none";
                     document.getElementById("reload-up").style.display = "inline";
                 }
+
+                line();
             }
 
         }
