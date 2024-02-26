@@ -89,7 +89,31 @@ for (let i of cells) {
                 cellNine = document.getElementById("cell-9").innerText;
 
                 result = checkResult();
-                console.log(result);
+                
+                if(result === "PLAYER X WIN"){
+                    document.getElementById("result-container").style.display = "flex";
+                    document.getElementById("result").innerText = 'close';
+                    document.getElementById("result").style.fontSize = '38px';
+                    document.getElementById("result").style.color = '#53bd9e';
+                    document.getElementById("player-select-container").style.display = "none";
+                    document.getElementById("reload-down").style.display = "none";
+                    document.getElementById("reload-up").style.display = "inline";
+                }else if(result === "PLAYER O WIN"){
+                    document.getElementById("result-container").style.display = "flex";
+                    document.getElementById("result").innerText = 'circle';
+                    document.getElementById("result").style.fontSize = '40px';
+                    document.getElementById("result").style.color = '#ed6677';
+                    document.getElementById("player-select-container").style.display = "none";
+                    document.getElementById("reload-down").style.display = "none";
+                    document.getElementById("reload-up").style.display = "inline";
+                }else if(result === "DRAW"){
+                    document.getElementById("result-container").style.display = "flex";
+                    document.getElementById("result").style.display = "none";
+                    document.getElementById("wins").innerText = "DRAW :)";
+                    document.getElementById("player-select-container").style.display = "none";
+                    document.getElementById("reload-down").style.display = "none";
+                    document.getElementById("reload-up").style.display = "inline";
+                }
 
             } else {
                 i.firstElementChild.innerText = secondPlayer;
@@ -120,7 +144,31 @@ for (let i of cells) {
                 cellNine = document.getElementById("cell-9").innerText;
 
                 result = checkResult();
-                console.log(result);
+
+                if(result === "PLAYER X WIN"){
+                    document.getElementById("result-container").style.display = "flex";
+                    document.getElementById("result").innerText = 'close';
+                    document.getElementById("result").style.fontSize = '38px';
+                    document.getElementById("result").style.color = '#53bd9e';
+                    document.getElementById("player-select-container").style.display = "none";
+                    document.getElementById("reload-down").style.display = "none";
+                    document.getElementById("reload-up").style.display = "inline";
+                }else if(result === "PLAYER O WIN"){
+                    document.getElementById("result-container").style.display = "flex";
+                    document.getElementById("result").innerText = 'circle';
+                    document.getElementById("result").style.fontSize = '40px';
+                    document.getElementById("result").style.color = '#ed6677';
+                    document.getElementById("player-select-container").style.display = "none";
+                    document.getElementById("reload-down").style.display = "none";
+                    document.getElementById("reload-up").style.display = "inline";
+                }else if(result === "DRAW"){
+                    document.getElementById("result-container").style.display = "flex";
+                    document.getElementById("result").style.display = "none";
+                    document.getElementById("wins").innerText = "DRAW :)";
+                    document.getElementById("player-select-container").style.display = "none";
+                    document.getElementById("reload-down").style.display = "none";
+                    document.getElementById("reload-up").style.display = "inline";
+                }
             }
 
         }
