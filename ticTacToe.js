@@ -2,6 +2,16 @@ let firstPlayer;
 let secondPlayer;
 let playCount = document.getElementsByClassName('cells').length;
 
+const cellOne = document.getElementById("cell-1").innerText;
+const cellTwo = document.getElementById("cell-2").innerText;
+const cellThree = document.getElementById("cell-3").innerText;
+const cellFour = document.getElementById("cell-4").innerText;
+const cellFive = document.getElementById("cell-5").innerText;
+const cellSix = document.getElementById("cell-6").innerText;
+const cellSeven = document.getElementById("cell-7").innerText;
+const cellEight = document.getElementById("cell-8").innerText;
+const cellNine = document.getElementById("cell-9").innerText;
+
 
 
 if (document.getElementById("player-select").innerText === 'circle') {
