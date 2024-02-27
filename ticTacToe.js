@@ -115,12 +115,42 @@ for (let i of cells) {
                     document.getElementById("player-select").style.fontSize = "6vw";
                     document.getElementById("player-select").style.color = "#53bd9e";
 
+                    width = window.innerWidth;
+                    if (width >= 1024) {
+                        document.getElementById("player-select").style.fontSize = "5vw";
+                    } else if (width >= 768) {
+                        document.getElementById("player-select").style.fontSize = "7vw";
+                    } else if (width >= 640) {
+                        document.getElementById("player-select").style.fontSize = "9vw";
+                    } else if (width >= 540) {
+                        document.getElementById("player-select").style.fontSize = "11vw";
+                    } else if (width >= 440) {
+                        document.getElementById("player-select").style.fontSize = "13vw";
+                    } else if (width < 440) {
+                        document.getElementById("player-select").style.fontSize = "15vw";
+                    }
+
                 } else {
                     i.firstElementChild.style.fontSize = "120px";
                     i.firstElementChild.style.color = "#53bd9e";
 
                     document.getElementById("player-select").style.fontSize = "5vw";
                     document.getElementById("player-select").style.color = "#ed6677";
+
+                    width = window.innerWidth;
+                    if (width >= 1024) {
+                        document.getElementById("player-select").style.fontSize = "6vw";
+                    } else if (width >= 768) {
+                        document.getElementById("player-select").style.fontSize = "8vw";
+                    } else if (width >= 640) {
+                        document.getElementById("player-select").style.fontSize = "10vw";
+                    } else if (width >= 540) {
+                        document.getElementById("player-select").style.fontSize = "13vw";
+                    } else if (width >= 440) {
+                        document.getElementById("player-select").style.fontSize = "15vw";
+                    } else if (width < 440) {
+                        document.getElementById("player-select").style.fontSize = "17vw";
+                    }
                 }
 
                 cellOne = document.getElementById("cell-1").innerText;
@@ -172,12 +202,42 @@ for (let i of cells) {
 
                     document.getElementById("player-select").style.fontSize = "6vw";
                     document.getElementById("player-select").style.color = "#53bd9e";
+
+                    width = window.innerWidth;
+                    if (width >= 1024) {
+                        document.getElementById("player-select").style.fontSize = "5vw";
+                    } else if (width >= 768) {
+                        document.getElementById("player-select").style.fontSize = "7vw";
+                    } else if (width >= 640) {
+                        document.getElementById("player-select").style.fontSize = "9vw";
+                    } else if (width >= 540) {
+                        document.getElementById("player-select").style.fontSize = "11vw";
+                    } else if (width >= 440) {
+                        document.getElementById("player-select").style.fontSize = "13vw";
+                    } else if (width < 440) {
+                        document.getElementById("player-select").style.fontSize = "15vw";
+                    }
                 } else {
                     i.firstElementChild.style.fontSize = "120px";
                     i.firstElementChild.style.color = "#53bd9e";
 
                     document.getElementById("player-select").style.fontSize = "5vw";
                     document.getElementById("player-select").style.color = "#ed6677";
+
+                    width = window.innerWidth;
+                    if (width >= 1024) {
+                        document.getElementById("player-select").style.fontSize = "6vw";
+                    } else if (width >= 768) {
+                        document.getElementById("player-select").style.fontSize = "8vw";
+                    } else if (width >= 640) {
+                        document.getElementById("player-select").style.fontSize = "10vw";
+                    } else if (width >= 540) {
+                        document.getElementById("player-select").style.fontSize = "13vw";
+                    } else if (width >= 440) {
+                        document.getElementById("player-select").style.fontSize = "15vw";
+                    } else if (width < 440) {
+                        document.getElementById("player-select").style.fontSize = "17vw";
+                    }
                 }
 
                 cellOne = document.getElementById("cell-1").innerText;
