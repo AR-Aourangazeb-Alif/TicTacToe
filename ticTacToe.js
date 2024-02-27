@@ -3,6 +3,13 @@ let secondPlayer;
 let playCount = document.getElementsByClassName('cells').length;
 let width;
 
+let playerXscore = 0;
+let playerOscore = 0;
+
+document.getElementById("player-X-score").innerText = playerXscore;
+document.getElementById("player-O-score").innerText = playerOscore;
+
+
 let cellOne = document.getElementById("cell-1").innerText;
 let cellTwo = document.getElementById("cell-2").innerText;
 let cellThree = document.getElementById("cell-3").innerText;
@@ -168,22 +175,32 @@ for (let i of cells) {
                 if (result === "PLAYER X WIN") {
                     document.getElementById("result-container").style.display = "flex";
                     document.getElementById("result").innerText = 'close';
+                    document.getElementById("wins").innerText = "wins!";
                     document.getElementById("result").style.fontSize = '38px';
                     document.getElementById("result").style.color = '#53bd9e';
                     document.getElementById("player-select-container").style.display = "none";
                     document.getElementById("reload-down").style.display = "none";
                     document.getElementById("reload-up").style.display = "inline";
+
+                    playerXscore++;
+                    document.getElementById("player-X-score").innerText = playerXscore;
+
                 } else if (result === "PLAYER O WIN") {
                     document.getElementById("result-container").style.display = "flex";
                     document.getElementById("result").innerText = 'circle';
+                    document.getElementById("wins").innerText = "wins!";
                     document.getElementById("result").style.fontSize = '40px';
                     document.getElementById("result").style.color = '#ed6677';
                     document.getElementById("player-select-container").style.display = "none";
                     document.getElementById("reload-down").style.display = "none";
                     document.getElementById("reload-up").style.display = "inline";
+
+                    playerOscore++;
+                    document.getElementById("player-O-score").innerText = playerOscore;
+
                 } else if (result === "DRAW") {
                     document.getElementById("result-container").style.display = "flex";
-                    document.getElementById("result").style.display = "none";
+                    document.getElementById("result").innerText = "";
                     document.getElementById("wins").innerText = "DRAW :)";
                     document.getElementById("player-select-container").style.display = "none";
                     document.getElementById("reload-down").style.display = "none";
@@ -255,22 +272,32 @@ for (let i of cells) {
                 if (result === "PLAYER X WIN") {
                     document.getElementById("result-container").style.display = "flex";
                     document.getElementById("result").innerText = 'close';
+                    document.getElementById("wins").innerText = "wins!";
                     document.getElementById("result").style.fontSize = '38px';
                     document.getElementById("result").style.color = '#53bd9e';
                     document.getElementById("player-select-container").style.display = "none";
                     document.getElementById("reload-down").style.display = "none";
                     document.getElementById("reload-up").style.display = "inline";
+
+                    playerXscore++;
+                    document.getElementById("player-X-score").innerText = playerXscore;
+
                 } else if (result === "PLAYER O WIN") {
                     document.getElementById("result-container").style.display = "flex";
                     document.getElementById("result").innerText = 'circle';
+                    document.getElementById("wins").innerText = "wins!";
                     document.getElementById("result").style.fontSize = '40px';
                     document.getElementById("result").style.color = '#ed6677';
                     document.getElementById("player-select-container").style.display = "none";
                     document.getElementById("reload-down").style.display = "none";
                     document.getElementById("reload-up").style.display = "inline";
+
+                    playerOscore++;
+                    document.getElementById("player-O-score").innerText = playerOscore;
+
                 } else if (result === "DRAW") {
                     document.getElementById("result-container").style.display = "flex";
-                    document.getElementById("result").style.display = "none";
+                    document.getElementById("result").innerText = "";
                     document.getElementById("wins").innerText = "DRAW :)";
                     document.getElementById("player-select-container").style.display = "none";
                     document.getElementById("reload-down").style.display = "none";

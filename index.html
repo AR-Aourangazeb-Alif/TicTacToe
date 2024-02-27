@@ -166,19 +166,29 @@
 
         </div>
 
-        <div class="h-[18dvh] w-[95vw] md:w-1/2 flex items-center justify-center">
+        <div class="h-[18dvh] w-[95vw] md:w-1/2 flex items-center justify-between">
+            <div class="text-center">
+                <span class="material-symbols-outlined cursor-pointer font-bold text-[#53bd9e]">close</span> <br>
+                <p id="player-X-score" class="text-white"></p>
+            </div>
+
             <div class="items-center hidden" id="result-container">
                 <span class="material-symbols-outlined mr-2 font-bold" id="result">
 
                 </span>
                 <span class="text-[#F4E87C] text-xl font-medium" id="wins">
-                    wins!
+                    
                 </span>
 
             </div>
             <span class="material-symbols-outlined cursor-pointer text-5xl text-[#9B7EDE] active:text-red-400 font-semibold" id="reload-down" onclick="reset()">
                 frame_reload
             </span>
+
+            <div class="text-center">
+                <span class="material-symbols-outlined cursor-pointer font-bold text-[#ed6677]">circle</span> <br>
+                <p id="player-O-score" class="text-white"></p>
+            </div>
         </div>
 
     </div>
