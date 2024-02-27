@@ -17,5 +17,22 @@ window.addEventListener('resize', function () {
             document.getElementById("player-select").style.fontSize = "15vw";
         }
 
+    }else {
+
+        width = window.innerWidth;
+        if (width >= 1024) {
+            document.getElementById("player-select").style.fontSize = "6vw";
+        } else if (width >= 768) {
+            document.getElementById("player-select").style.fontSize = "8vw";
+        } else if (width >= 640) {
+            document.getElementById("player-select").style.fontSize = "10vw";
+        } else if (width >= 540) {
+            document.getElementById("player-select").style.fontSize = "13vw";
+        } else if (width >= 440) {
+            document.getElementById("player-select").style.fontSize = "15vw";
+        } else if (width < 440) {
+            document.getElementById("player-select").style.fontSize = "17vw";
+        }
+
     }
 })

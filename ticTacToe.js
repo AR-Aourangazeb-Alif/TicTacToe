@@ -1,6 +1,7 @@
 let firstPlayer;
 let secondPlayer;
 let playCount = document.getElementsByClassName('cells').length;
+let width;
 
 let cellOne = document.getElementById("cell-1").innerText;
 let cellTwo = document.getElementById("cell-2").innerText;
@@ -17,18 +18,18 @@ let result;
 
 if (document.getElementById("player-select").innerText === 'circle') {
     document.getElementById("player-select").style.color = "#ed6677";
-    let width = window.innerWidth;
-    if(width >= 1024){
+    width = window.innerWidth;
+    if (width >= 1024) {
         document.getElementById("player-select").style.fontSize = "5vw";
-    }else if(width >= 768){
+    } else if (width >= 768) {
         document.getElementById("player-select").style.fontSize = "7vw";
-    }else if(width >= 640){
+    } else if (width >= 640) {
         document.getElementById("player-select").style.fontSize = "9vw";
-    }else if(width >= 540){
+    } else if (width >= 540) {
         document.getElementById("player-select").style.fontSize = "11vw";
-    }else if(width >= 440){
+    } else if (width >= 440) {
         document.getElementById("player-select").style.fontSize = "13vw";
-    }else if(width < 440){
+    } else if (width < 440) {
         document.getElementById("player-select").style.fontSize = "15vw";
     }
 
@@ -49,14 +50,43 @@ function playerSelect() {
         }
 
         if (document.getElementById("player-select").innerText === 'circle') {
-            document.getElementById("player-select").style.fontSize = "5vw";
             document.getElementById("player-select").style.color = "#ed6677";
+
+            width = window.innerWidth;
+            if (width >= 1024) {
+                document.getElementById("player-select").style.fontSize = "5vw";
+            } else if (width >= 768) {
+                document.getElementById("player-select").style.fontSize = "7vw";
+            } else if (width >= 640) {
+                document.getElementById("player-select").style.fontSize = "9vw";
+            } else if (width >= 540) {
+                document.getElementById("player-select").style.fontSize = "11vw";
+            } else if (width >= 440) {
+                document.getElementById("player-select").style.fontSize = "13vw";
+            } else if (width < 440) {
+                document.getElementById("player-select").style.fontSize = "15vw";
+            }
 
             firstPlayer = 'circle';
             secondPlayer = 'close';
         } else {
             document.getElementById("player-select").style.fontSize = "6vw";
             document.getElementById("player-select").style.color = "#53bd9e";
+
+            width = window.innerWidth;
+            if (width >= 1024) {
+                document.getElementById("player-select").style.fontSize = "6vw";
+            } else if (width >= 768) {
+                document.getElementById("player-select").style.fontSize = "8vw";
+            } else if (width >= 640) {
+                document.getElementById("player-select").style.fontSize = "10vw";
+            } else if (width >= 540) {
+                document.getElementById("player-select").style.fontSize = "13vw";
+            } else if (width >= 440) {
+                document.getElementById("player-select").style.fontSize = "15vw";
+            } else if (width < 440) {
+                document.getElementById("player-select").style.fontSize = "17vw";
+            }
 
             firstPlayer = 'close';
             secondPlayer = 'circle';
@@ -104,8 +134,8 @@ for (let i of cells) {
                 cellNine = document.getElementById("cell-9").innerText;
 
                 result = checkResult();
-                
-                if(result === "PLAYER X WIN"){
+
+                if (result === "PLAYER X WIN") {
                     document.getElementById("result-container").style.display = "flex";
                     document.getElementById("result").innerText = 'close';
                     document.getElementById("result").style.fontSize = '38px';
@@ -113,7 +143,7 @@ for (let i of cells) {
                     document.getElementById("player-select-container").style.display = "none";
                     document.getElementById("reload-down").style.display = "none";
                     document.getElementById("reload-up").style.display = "inline";
-                }else if(result === "PLAYER O WIN"){
+                } else if (result === "PLAYER O WIN") {
                     document.getElementById("result-container").style.display = "flex";
                     document.getElementById("result").innerText = 'circle';
                     document.getElementById("result").style.fontSize = '40px';
@@ -121,7 +151,7 @@ for (let i of cells) {
                     document.getElementById("player-select-container").style.display = "none";
                     document.getElementById("reload-down").style.display = "none";
                     document.getElementById("reload-up").style.display = "inline";
-                }else if(result === "DRAW"){
+                } else if (result === "DRAW") {
                     document.getElementById("result-container").style.display = "flex";
                     document.getElementById("result").style.display = "none";
                     document.getElementById("wins").innerText = "DRAW :)";
@@ -162,7 +192,7 @@ for (let i of cells) {
 
                 result = checkResult();
 
-                if(result === "PLAYER X WIN"){
+                if (result === "PLAYER X WIN") {
                     document.getElementById("result-container").style.display = "flex";
                     document.getElementById("result").innerText = 'close';
                     document.getElementById("result").style.fontSize = '38px';
@@ -170,7 +200,7 @@ for (let i of cells) {
                     document.getElementById("player-select-container").style.display = "none";
                     document.getElementById("reload-down").style.display = "none";
                     document.getElementById("reload-up").style.display = "inline";
-                }else if(result === "PLAYER O WIN"){
+                } else if (result === "PLAYER O WIN") {
                     document.getElementById("result-container").style.display = "flex";
                     document.getElementById("result").innerText = 'circle';
                     document.getElementById("result").style.fontSize = '40px';
@@ -178,7 +208,7 @@ for (let i of cells) {
                     document.getElementById("player-select-container").style.display = "none";
                     document.getElementById("reload-down").style.display = "none";
                     document.getElementById("reload-up").style.display = "inline";
-                }else if(result === "DRAW"){
+                } else if (result === "DRAW") {
                     document.getElementById("result-container").style.display = "flex";
                     document.getElementById("result").style.display = "none";
                     document.getElementById("wins").innerText = "DRAW :)";
