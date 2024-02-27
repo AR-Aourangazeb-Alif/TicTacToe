@@ -36,7 +36,7 @@
 
                 to play
             </div>
-            <span class="material-symbols-outlined cursor-pointer text-5xl hidden text-[#9B7EDE] font-semibold" id="reload-up">
+            <span class="material-symbols-outlined cursor-pointer text-5xl hidden text-[#9B7EDE] active:text-red-400 font-semibold" id="reload-up" onclick="reset()">
                 frame_reload
             </span>
 
@@ -133,32 +133,32 @@
 
 
                 <div class="absolute h-full grid grid-rows-6 w-full">
-                    <div class="border-solid border-b-[10px] border-[#F4E87C] -mb-[10px] w-0 transition-all duration-700 ease-in" id="row-1"></div>
+                    <div class="border-solid border-b-[10px] border-[#F4E87C] -mb-[10px] w-0 transition-all duration-700 ease-in row-lines" id="row-1"></div>
                     <div class="border-solid border-b-[10px] border-transparent -mb-[10px]"></div>
-                    <div class="border-solid border-b-[10px] border-[#F4E87C] -mb-[10px] w-0 transition-all duration-700 ease-in" id="row-2"></div>
+                    <div class="border-solid border-b-[10px] border-[#F4E87C] -mb-[10px] w-0 transition-all duration-700 ease-in row-lines" id="row-2"></div>
                     <div class="border-solid border-b-[10px] border-transparent -mb-[10px]"></div>
-                    <div class="border-solid border-b-[10px] border-[#F4E87C] -mb-[10px] w-0 transition-all duration-700 ease-in" id="row-3"></div>
+                    <div class="border-solid border-b-[10px] border-[#F4E87C] -mb-[10px] w-0 transition-all duration-700 ease-in row-lines" id="row-3"></div>
                     <div class="border-solid border-b-[10px] border-transparent -mb-[10px]"></div>
                 </div>
 
                 <div class="absolute h-full w-full grid grid-cols-6">
-                    <div class="border-solid border-r-[10px] border-[#f4e87c] -mr-[6px] h-0 transition-all duration-700 ease-in" id="colm-1"></div>
+                    <div class="border-solid border-r-[10px] border-[#f4e87c] -mr-[6px] h-0 transition-all duration-700 ease-in colm-lines" id="colm-1"></div>
                     <div class="border-solid border-r-[10px] border-transparent -mr-[14px]"></div>
-                    <div class="border-solid border-r-[10px] border-[#F4E87C] -mr-[6px] h-0 transition-all duration-700 ease-in" id="colm-2"></div>
+                    <div class="border-solid border-r-[10px] border-[#F4E87C] -mr-[6px] h-0 transition-all duration-700 ease-in colm-lines" id="colm-2"></div>
                     <div class="border-solid border-r-[10px] border-transparent -mr-[14px]"></div>
-                    <div class="border-solid border-r-[10px] border-[#F4E87C] -mr-[6px] h-0 transition-all duration-700 ease-in" id="colm-3"></div>
+                    <div class="border-solid border-r-[10px] border-[#F4E87C] -mr-[6px] h-0 transition-all duration-700 ease-in colm-lines" id="colm-3"></div>
                     <div class="border-solid border-r-[10px] border-transparent -mr-[14px]"></div>
                 </div>
 
                 <div class="absolute h-full w-full flex items-center justify-center">
 
-                    <div class="h-[8px] bg-[#F4E87C] rotate-[45deg] scale-[1.4] width-transition w-0" id="diagonal-1"></div>
+                    <div class="h-[8px] bg-[#F4E87C] rotate-[45deg] scale-[1.4] width-transition w-0 diagonal-lines" id="diagonal-1"></div>
 
                 </div>
 
                 <div class="absolute h-full w-full flex items-center justify-center">
 
-                    <div class="h-[8px] bg-[#F4E87C] -rotate-[45deg] scale-[1.4] width-transition w-0" id="diagonal-2"></div>
+                    <div class="h-[8px] bg-[#F4E87C] -rotate-[45deg] scale-[1.4] width-transition w-0 diagonal-lines" id="diagonal-2"></div>
 
                 </div>
 
@@ -176,7 +176,7 @@
                 </span>
 
             </div>
-            <span class="material-symbols-outlined cursor-pointer text-5xl text-[#9B7EDE] font-semibold" id="reload-down">
+            <span class="material-symbols-outlined cursor-pointer text-5xl text-[#9B7EDE] active:text-red-400 font-semibold" id="reload-down" onclick="reset()">
                 frame_reload
             </span>
         </div>
@@ -186,6 +186,7 @@
 
 
     <script src="ticTacToe.js"></script>
+    <script src="reset.js"></script>
     <script src="checkResult.js"></script>
     <script src="line.js"></script>
     <script src="media.js"></script>

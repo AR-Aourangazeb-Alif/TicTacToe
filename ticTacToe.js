@@ -283,8 +283,3 @@ for (let i of cells) {
         }
     })
 }
-
-
-
-
-console.log(window.innerWidth);
