@@ -16,8 +16,23 @@ let cellNine = document.getElementById("cell-9").innerText;
 let result;
 
 if (document.getElementById("player-select").innerText === 'circle') {
-    document.getElementById("player-select").style.fontSize = "5vw";
     document.getElementById("player-select").style.color = "#ed6677";
+    let width = window.innerWidth;
+    if(width >= 1024){
+        document.getElementById("player-select").style.fontSize = "5vw";
+    }else if(width >= 768){
+        document.getElementById("player-select").style.fontSize = "7vw";
+    }else if(width >= 640){
+        document.getElementById("player-select").style.fontSize = "9vw";
+    }else if(width >= 540){
+        document.getElementById("player-select").style.fontSize = "11vw";
+    }else if(width >= 440){
+        document.getElementById("player-select").style.fontSize = "13vw";
+    }else if(width < 440){
+        document.getElementById("player-select").style.fontSize = "15vw";
+    }
+
+
     firstPlayer = 'circle';
     secondPlayer = 'close';
 }
@@ -179,3 +194,7 @@ for (let i of cells) {
     })
 }
 
+
+
+
+console.log(window.innerWidth);
